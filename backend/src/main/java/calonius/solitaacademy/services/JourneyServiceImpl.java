@@ -1,7 +1,7 @@
 package calonius.solitaacademy.services;
 
 import calonius.solitaacademy.models.Journey;
-import calonius.solitaacademy.reposoitories.JourneyRepository;
+import calonius.solitaacademy.repositories.JourneyRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;

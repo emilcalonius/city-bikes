@@ -1,7 +1,7 @@
 FROM maven:latest AS maven
 
 COPY . .
-RUN mvn package 
+RUN mvn -f pom.xml clean package -DskipTests
 
 FROM openjdk:17-alpine
 

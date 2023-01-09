@@ -1,13 +1,15 @@
 package calonius.solitaacademy.services;
 
 import calonius.solitaacademy.models.Station;
-import calonius.solitaacademy.reposoitories.StationRepository;
+import calonius.solitaacademy.repositories.StationRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Set;
 
+@Service
 public class StationServiceImpl implements StationService {
     private final Logger logger = LoggerFactory.getLogger(StationServiceImpl.class);
     private final StationRepository stationRepository;

@@ -1,4 +1,4 @@
-package calonius.solitaacademy.reposoitories;
+package calonius.solitaacademy.repositories;
 
 import calonius.solitaacademy.models.Station;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -9,6 +9,6 @@ import java.util.Set;
 
 @Repository
 public interface StationRepository extends JpaRepository<Station, Integer> {
-    @Query("SELECT s FROM Station s LIMIT :limit OFFSET :offset")
+    @Query(value = "SELECT s FROM Station s LIMIT :limit OFFSET :offset", nativeQuery = true)
     Set<Station> getPageOfStations(int limit, int offset);
 }
